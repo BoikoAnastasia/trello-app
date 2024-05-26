@@ -1,0 +1,10 @@
+.board-preview {
+    padding: 20px 30px;
+    font-size: 30px;
+    box-shadow: 4px 4px 5px 0 gray;
+    border-radius: 10px;
+    color: gray;
+    width: 300px;
+    text-align: center;
+    cursor: pointer;
+}

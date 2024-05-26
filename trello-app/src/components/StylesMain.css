@@ -1,0 +1,70 @@
+.create-board{
+    max-width: 300px;
+}
+
+.button-green{
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.board-green{
+    background-color: #95e49b;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px 0 gray;
+}
+.board-set{
+    text-align: center;
+}
+.board-set *{
+    margin: 10px 0;
+}
+#board-name{
+    padding: 10px;
+    border-radius: 5px;
+}
+.board-set__buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.board-set__buttons button{
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#btn-cencel{
+    background-color: transparent;
+    color: white;
+    border: none;
+    
+}
+
+#btn-create{
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px 0 gray;
+}
+
+.list-boards{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.add-list{
+    background-color: #0a2669;
+    color: white;
+    text-align: center;
+    border: none;
+    padding: 30px 20px;
+    cursor: pointer;
+}

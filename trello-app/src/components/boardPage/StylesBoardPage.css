@@ -1,0 +1,40 @@
+.board{
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px 0 gray;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.boards{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.board input{
+    width: calc(100% - 40px);
+    padding: 10px 0;
+    margin: 5x 0;
+}
+
+.board #btn-close{
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    color: #95e49b;
+    border-radius: 50%;
+    border: 2px solid #95e49b;
+    background-color: transparent;
+    cursor: pointer;
+    /* padding: 5px; */
+}
+
+.board-tasks{
+
+}
