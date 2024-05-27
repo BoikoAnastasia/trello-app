@@ -9,7 +9,7 @@ interface IBoards {
 }
 
 export const Main = () => {
-  let nextId = 0;
+  const [nextId, setNextId] = useState(0);
   const [showBoard, setShowBoard] = useState(true);
   const [nameBoard, setNameBoard] = useState("");
   const [arrBoards, setArrBoards] = useState<IBoards[]>([]);
@@ -20,12 +20,12 @@ export const Main = () => {
     if (nameBoard === "") {
       return;
     }
-
+    setNextId(nextId + 1);
     setShowBoard(false);
     setArrBoards([
       ...arrBoards,
       {
-        id: nextId++,
+        id: nextId,
         name: nameBoard,
       },
     ]);

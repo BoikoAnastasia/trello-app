@@ -23,14 +23,12 @@ export const BoardPage = () => {
         ...listBoard,
         {
           id: nextId,
-          nameBoard: nameBoard
+          nameBoard: nameBoard,
         },
       ]);
       setNameBoard("");
     }
   };
-
-
 
   return (
     <>
@@ -54,7 +52,7 @@ export const BoardPage = () => {
           </button>
         )}
       </div>
-     <Boards listBoard={listBoard}></Boards>
+      <Boards listBoard={listBoard}></Boards>
     </>
   );
 };

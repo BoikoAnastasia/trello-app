@@ -1,0 +1,16 @@
+.taskNotSucces{
+    background-color: rgb(174, 224, 174);
+}
+
+.taskSucces{
+    text-decoration: line-through;
+    background-color: rgb(205, 199, 199);
+}
+
+.task{
+    box-shadow: 4px 4px 5px 0px gray;
+    width: calc(100% - 40px);
+    padding: 20px 0;
+    text-align: center;
+    cursor: pointer;
+}
