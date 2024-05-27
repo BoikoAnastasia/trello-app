@@ -1,31 +1,19 @@
 import { useState } from "react";
 import "../StylesMain.css";
 import "./StylesBoardPage.css";
-
-//все поддоски
-// interface IBoardsList {
-//   id: number;
-//   boardInfo: IBoardInfo;
-// }
+import { Boards } from "./components/Boards/Boards";
 
 //информация о доске
 interface IBoardInfo {
   id: number;
   nameBoard: string;
-  tasks: Task[] | [];
-}
-
-interface Task {
-  id: number;
-  status: false;
-  nameTask: string;
 }
 
 export const BoardPage = () => {
   const [nextId, setNextId] = useState(0);
   const [showList, setShowList] = useState(false);
   const [nameBoard, setNameBoard] = useState("");
-  const [taskName, setTaskName] = useState("");
+
   const [listBoard, setListBoard] = useState<IBoardInfo[]>([]);
 
   const handleKeyDown = (event: any) => {
@@ -35,18 +23,14 @@ export const BoardPage = () => {
         ...listBoard,
         {
           id: nextId,
-          nameBoard: nameBoard,
-          tasks: [],
+          nameBoard: nameBoard
         },
       ]);
       setNameBoard("");
     }
   };
 
-  const handleKeyDownTask = (e: any) => {
-    if (e.keyCode === 13 && taskName !== "") {
-    }
-  };
+
 
   return (
     <>
@@ -70,28 +54,7 @@ export const BoardPage = () => {
           </button>
         )}
       </div>
-      <div className="boards">
-        {listBoard &&
-          listBoard.map((item) => (
-            <div key={item.id} className="board">
-              <span>{item.nameBoard}</span>
-              <hr />
-              {item.tasks.length ? (
-                item.tasks.map((task) => (
-                  <div key={task.id}>{task.nameTask}</div>
-                ))
-              ) : (
-                <>
-                  <input
-                    onKeyDown={handleKeyDownTask}
-                    type="text"
-                    onChange={(e) => setTaskName(e.target.value)}
-                  />
-                </>
-              )}
-            </div>
-          ))}
-      </div>
+     <Boards listBoard={listBoard}></Boards>
     </>
   );
 };
